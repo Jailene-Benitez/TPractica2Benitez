@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="phaser/phaser-arcade-physics.js"></script>
+    <script src="paginas/Nivel1.js"></script>
+    <title>VIDEO JUEGO</title>
+</head>
+<body>
+    <h1>Video Juego</h1>
+    <h2> Jailene Benitez</h2>
+    <style>
+        #canvas{
+            border: 1px dashed red;
+            height:500px;
+            width:500px;
+            margin:auto;
+        }
+    </style>
+    <div id="canvas"></div>
+    <script>
+        const config = {
+            type:Phaser.AUTO,
+            width:500,
+            height:500,
+            parent:'canvas',
+            scene:Nivel1,
+            physics:{
+                default:'arcade',
+                arcade:{
+                    debug:false,
+                    gravity:{y:200}
+                }
+            }
+        }
+        const game = new Phaser.Game(config);
+    </script>
+</body>
+</html>
